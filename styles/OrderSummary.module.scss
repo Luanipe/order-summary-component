@@ -1,0 +1,132 @@
+@use 'variables';
+
+@mixin flexConfig($justifyContent, $alignItems, $flexDirection) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $flexDirection;
+}
+
+.component {
+  @include flexConfig(flex-start, center, column);
+
+  width: auto;
+  height: 75vh;
+  min-width: 450px;
+  min-height: 700px;
+  max-height: 700px;
+  overflow: hidden;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 50px 0 hsl(223, 47%, 23%, 20%);
+}
+
+.musicImage {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  @include flexConfig(space-between, center, column);
+  
+  margin: auto;
+}
+
+.planContainer {
+  @include flexConfig(space-between, center, row);
+
+  width: 22rem;
+  height: 6rem;
+  background-color: variables.$veryPaleBlue;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  padding: 1.5em;
+}
+
+.plan {
+  @include flexConfig(center, center, row); 
+}
+
+.planInfos {
+  @include flexConfig(center, flex-start, column);
+  line-height: 1.7em;
+}
+
+.planType {
+  white-space: nowrap;
+  color: variables.$darkBlue;
+  font-weight: 900;
+}
+
+.planPrice {
+  white-space: nowrap;
+  color: variables.$desaturatedBlue;
+}
+
+.changeButton {
+  background: none;
+  border: none;
+  color: variables.$brightBlue;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    color: variables.$hoverColor;
+    text-decoration: none;
+  }
+}
+
+.submitButton {
+  width: 22rem;
+  height: 3rem; 
+  background-color: variables.$brightBlue;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 5px 15px 0 hsl(245, 75%, 52%, 50%);
+  margin-top: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$hoverColor;
+  }
+}
+
+.cancelButton {
+  background:none;
+  border:none;
+  margin-top: 2rem;
+  color: variables.$desaturatedBlue;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    color: variables.$darkBlue;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .component {
+    min-width: 375px;
+    min-height: 650px;
+    max-height: 650px;
+  }
+
+  .musicImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .planContainer {
+    width: 100%;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
