@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/order-summary-component-xDslHjBrob)
-- Live Site URL: [Add live site URL here](https://order-summary-component-luanipe.vercel.app)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/order-summary-component-xDslHjBrob)
+- Live Site URL: [Vercel](https://order-summary-component-luanipe.vercel.app)
 
 ## My process
 
